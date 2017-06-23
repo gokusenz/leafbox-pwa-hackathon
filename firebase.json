@@ -1,0 +1,28 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": [
+      "firebase.json"
+    ]
+    // "headers": [{
+    //   "source" : "**",
+    //   "headers" : [{
+    //     "key" : "Access-Control-Allow-Origin",
+    //     "value" : "*"
+    //   },
+    //   {
+    //     "key" : "Access-Control-Allow-Headers",
+    //     "value" : "Origin, X-Requested-With, Content-Type, Accept"
+    //   }]
+    // }]
+  }
+}
