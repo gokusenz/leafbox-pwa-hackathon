@@ -1,2 +1,2 @@
 # leafbox-pwa-hackathon
-leafbox-pwa-hackathon for PWA Online Hackathon (Thailand)
+leafbox-pwa-hackathon team for PWA Online Hackathon (Thailand)
