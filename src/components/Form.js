@@ -33,6 +33,7 @@ const Form = ({ handleSubmit, handleChange, getLocation, name, note, lat, lng })
         onChange={e => handleChange(e, 'note')}
         label="Note"
         rows={3}
+        floatingLabel
         required={true}
         style={{width: '100%'}}
       />
