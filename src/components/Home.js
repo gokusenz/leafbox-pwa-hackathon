@@ -31,6 +31,10 @@ const Home = () => (
         rows={3}
         style={{width: '100%'}}
     />
+
+    <Button raised colored>บันทึก</Button>
+
+
   </div>
 )
 
