@@ -1,6 +1,9 @@
 var path = require('path');
+require('dotenv').config()
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const task = process.env.NODE_ENV || 'development'
 
 module.exports = {
   devtool: 'eval',
@@ -18,6 +21,11 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(task),
+      },
+    }),
     new HtmlWebpackPlugin({
       template: 'public/index.html'
     })

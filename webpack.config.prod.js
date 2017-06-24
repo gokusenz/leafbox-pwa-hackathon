@@ -4,6 +4,9 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var OfflinePlugin = require('offline-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+require('dotenv').config()
+
+const task = 'production'
 
 const pkg = require('./package.json');
 
@@ -38,7 +41,9 @@ module.exports = {
       sourceMap: false
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
+      'process.env': {
+        NODE_ENV: JSON.stringify(task),
+      },
     }),
     new OfflinePlugin({
       excludes: ["images/*"],
