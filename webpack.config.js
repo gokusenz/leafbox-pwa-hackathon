@@ -33,16 +33,16 @@ module.exports = {
       loaders: ["style-loader", "css-loader"]
     },
     {
-        test: /\.(jpe?g|png|gif|svg|eot|svg|otf|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 100000,
-            },
+      test: /\.(jpe?g|png|gif|svg|eot|svg|otf|ttf|woff|woff2)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 100000,
           },
-        ],
-        exclude: /(node_modules)/,
-      }]
+        },
+      ],
+      exclude: /(node_modules)/,
+    }]
   }
 };
