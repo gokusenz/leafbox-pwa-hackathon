@@ -2,7 +2,7 @@ import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
-import '../public/styles/styles.css';
+import './styles.css';
 
 const rootEl = document.getElementById('root');
 render(
