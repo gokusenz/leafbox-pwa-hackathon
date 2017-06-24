@@ -43,6 +43,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(task),
+        apiKey: JSON.stringify(process.env.apiKey),
+        authDomain: JSON.stringify(process.env.authDomain),
+        databaseURL: JSON.stringify(process.env.databaseURL),
+        storageBucket: JSON.stringify(process.env.storageBucket),
+        messagingSenderId: JSON.stringify(process.env.messagingSenderId),
       },
     }),
     new OfflinePlugin({

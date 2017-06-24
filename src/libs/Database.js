@@ -1,13 +1,21 @@
 import firebase from 'firebase'
 
-const config = {
-  apiKey: "AIzaSyBi56RzLzF4dCgdh53vJjZfBsGzIrJ5YHA",
-  authDomain: "leafbox-pwa-hackathon.firebaseapp.com",
-  databaseURL: "https://leafbox-pwa-hackathon.firebaseio.com",
-  projectId: "leafbox-pwa-hackathon",
-  storageBucket: "leafbox-pwa-hackathon.appspot.com",
-  messagingSenderId: "179178003414"
+const database = {
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
 }
+
+const config = {
+  apiKey: database.apiKey,
+  authDomain: database.authDomain,
+  databaseURL: database.databaseURL,
+  storageBucket: database.storageBucket,
+  messagingSenderId: database.messagingSenderId,
+}
+
 const randomString = new Date().getTime()
 const otherApp = firebase.initializeApp(config, `LeafBox${randomString}`)
 
