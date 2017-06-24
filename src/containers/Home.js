@@ -7,9 +7,7 @@ export class Home extends Component {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      feedback: '',
-    }
+    this.state = {}
     this.noteModel = new NoteModel()
   }
 
@@ -20,15 +18,15 @@ export class Home extends Component {
   handleSubmit(e) {
     e.preventDefault()
     const result = this.noteModel.saveData(
-      this.props.name,
-      e.target.topic.value,
-      e.target.feedback.value,
-      e.target.level.value,
+      e.target.name.value,
+      e.target.note.value,
+      0,
+      0,
     )
     if (result) {
       alert('บันทึกข้อมูลเรียบร้อย')
-      e.target.topic.value = ''
-      e.target.feedback.value = ''
+      e.target.name.value = ''
+      e.target.note.value = ''
     } else {
       alert('บันทึกข้อมูลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง')
     }
