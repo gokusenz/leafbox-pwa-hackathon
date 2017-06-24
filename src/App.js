@@ -19,8 +19,8 @@ const RouteHideDrawer = ({ component: Component, ...rest }) => (
 export default () => (
   <Router>
     <Layout fixedHeader>
-      <Header title="PWA"/>
-      <Drawer title="PWA">
+      <Header title="LeafBox"/>
+      <Drawer title="LeafBox">
         <Navigation>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
