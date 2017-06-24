@@ -1,5 +1,5 @@
 {
-  "name": "react-pwa",
+  "name": "leafbox-pwa-hackthon",
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulhoughton/react-pwa.git"
+    "url": "https://github.com/gokusenz/leafbox-pwa-hackathon"
   },
   "license": "MIT",
   "devDependencies": {
