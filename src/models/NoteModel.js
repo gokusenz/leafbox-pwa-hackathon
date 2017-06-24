@@ -6,14 +6,14 @@ class NoteModel {
     this.db = Database
   }
 
-  saveData(name, detail, lat, long) {
+  saveData(name, detail, lat, lng) {
     try {
       const noteRef = this.db.ref(`note/${name}`)
       noteRef.push().set({
         name,
         detail,
         lat,
-        long,
+        lng,
         date: DateLib.getCurDate(),
       })
       return true

@@ -7,19 +7,19 @@ export class Form extends Component {
     super(props)
     this.state = {
       lat: 0,
-      lon: 0,
+      lng: 0,
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.getLocation = this.getLocation.bind(this);
-    this.showPosition = this.showPosition.bind(this);
-    this.showError = this.showError.bind(this);
-    this.state = {}
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.getLocation = this.getLocation.bind(this)
+    this.mapPermission = this.mapPermission.bind(this)
+    this.showPosition = this.showPosition.bind(this)
+    this.showError = this.showError.bind(this)
     this.noteModel = new NoteModel()
   }
 
   componentDidMount() {
-    
+    this.mapPermission()
   }
 
   handleSubmit(e) {
@@ -27,8 +27,8 @@ export class Form extends Component {
     const result = this.noteModel.saveData(
       e.target.name.value,
       e.target.note.value,
-      0,
-      0,
+      this.state.lat,
+      this.state.lng,
     )
     if (result) {
       alert('บันทึกข้อมูลเรียบร้อย')
@@ -46,7 +46,12 @@ export class Form extends Component {
     this.setState(state)
   }
 
-  getLocation() {
+  getLocation(e) {
+    e.preventDefault() 
+    this.mapPermission()
+  }
+
+  mapPermission() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(this.showPosition, this.showError)
     } else { 
@@ -56,27 +61,12 @@ export class Form extends Component {
 
   showPosition(position) {
     let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    let latlon = new google.maps.LatLng(lat, lon)
-    console.log(lat, lon)
+    let lng = position.coords.longitude;
+    console.log(lat, lng)
     this.setState({
       lat,
-      lon,
-      latlon,
+      lng,
     })
-    // mapholder = document.getElementById('mapholder')
-    // mapholder.style.height = '250px';
-    // mapholder.style.width = '500px';
-
-    // var myOptions = {
-    //   center:latlon,zoom:14,
-    //   mapTypeId:google.maps.MapTypeId.ROADMAP,
-    //   mapTypeControl:false,
-    //   navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
-    // }
-    
-    // var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
-    // var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
   }
 
   showError(error) {
@@ -98,10 +88,10 @@ export class Form extends Component {
 
   render() {
     const { name, note } = this.props;
-    const { lat, lon, latlon } = this.state;
+    const { lat, lng } = this.state;
     return (
       <div>
-        <FormComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} getLocation={this.getLocation} name={name} note={note} latlon={latlon} />
+        <FormComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} getLocation={this.getLocation} name={name} note={note} lat={lat} lng={lng} />
       </div>
     );
   }
