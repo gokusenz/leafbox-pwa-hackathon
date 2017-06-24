@@ -37,6 +37,9 @@ export class Form extends Component {
       alert('บันทึกข้อมูลเรียบร้อย')
       e.target.name.value = ''
       e.target.note.value = ''
+      this.setState({
+        rating: 0,
+      })
     } else {
       alert('บันทึกข้อมูลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง')
     }
