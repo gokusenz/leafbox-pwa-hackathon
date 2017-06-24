@@ -29,6 +29,7 @@ module.exports = {
         databaseURL: JSON.stringify(process.env.databaseURL),
         storageBucket: JSON.stringify(process.env.storageBucket),
         messagingSenderId: JSON.stringify(process.env.messagingSenderId),
+        mapKey: JSON.stringify(process.env.mapKey),
       },
     }),
     new HtmlWebpackPlugin({
