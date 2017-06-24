@@ -6,7 +6,7 @@ class NoteModel {
     this.db = Database
   }
 
-  saveData(name, detail, lat, lng) {
+  saveData(name, detail, lat, lng, rating) {
     try {
       const noteRef = this.db.ref(`note/${name}`)
       noteRef.push().set({
@@ -14,6 +14,7 @@ class NoteModel {
         detail,
         lat,
         lng,
+        rating,
         date: DateLib.getCurDate(),
       })
       return true

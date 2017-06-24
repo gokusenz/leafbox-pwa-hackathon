@@ -8,13 +8,16 @@ export class Form extends Component {
     this.state = {
       lat: 0,
       lng: 0,
+      rating: 0,
     }
+    this.rating = 0
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.getLocation = this.getLocation.bind(this)
     this.mapPermission = this.mapPermission.bind(this)
     this.showPosition = this.showPosition.bind(this)
     this.showError = this.showError.bind(this)
+    this.ratingChanged = this.ratingChanged.bind(this)
     this.noteModel = new NoteModel()
   }
 
@@ -29,6 +32,7 @@ export class Form extends Component {
       e.target.note.value,
       this.state.lat,
       this.state.lng,
+      this.rating
     )
     if (result) {
       alert('บันทึกข้อมูลเรียบร้อย')
@@ -44,6 +48,13 @@ export class Form extends Component {
     state[fieldName] = event.target.value
     console.log(event.target.value)
     this.setState(state)
+  }
+
+  ratingChanged(newRating){
+    console.log(newRating)
+    this.setState({
+      rating: newRating,
+    })
   }
 
   getLocation(e) {
@@ -88,10 +99,10 @@ export class Form extends Component {
 
   render() {
     const { name, note } = this.props;
-    const { lat, lng } = this.state;
+    const { lat, lng, rating } = this.state;
     return (
       <div>
-        <FormComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} getLocation={this.getLocation} name={name} note={note} lat={lat} lng={lng} />
+        <FormComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} getLocation={this.getLocation} ratingChanged={this.ratingChanged} name={name} note={note} lat={lat} lng={lng} rating={rating} />
       </div>
     );
   }
