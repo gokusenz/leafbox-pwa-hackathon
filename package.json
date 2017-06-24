@@ -22,7 +22,6 @@
     "clean-webpack-plugin": "^0.1.15",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
-    "express": "^4.15.3",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^18.1.0",
     "offline-plugin": "^4.6.1",
