@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
 
 import About from './components/About';
-import Home from './containers/Home';
+import Form from './containers/Form';
 
 const RouteHideDrawer = ({ component: Component, ...rest }) => (
   <Route {...rest} render={() => {
@@ -27,7 +27,7 @@ export default () => (
         </Navigation>
       </Drawer>
       <Content>
-        <RouteHideDrawer exact path="/" component={ Home } />
+        <RouteHideDrawer exact path="/" component={ Form } />
         <RouteHideDrawer path="/about" component={ About } />
       </Content>
     </Layout>

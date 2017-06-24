@@ -2,7 +2,7 @@ import React from 'react';
 import { Textfield, Card, CardTitle, CardText, CardActions, CardMenu, Button, IconButton } from 'react-mdl';
 
 
-const Home = ({ handleSubmit, handleChange, name, note }) => (
+const Form = ({ handleSubmit, handleChange, name, note }) => (
   <div style={{width: '90%', margin: 'auto'}}>
     <Card shadow={0} style={{width: '100%', margin: 'auto'}}>
         <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Welcome to LeafBox</CardTitle>
@@ -43,4 +43,4 @@ const Home = ({ handleSubmit, handleChange, name, note }) => (
   </div>
 )
 
-export default Home;
+export default Form;

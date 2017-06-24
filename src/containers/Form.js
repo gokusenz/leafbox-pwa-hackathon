@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import HomeComponent from '../components/Home'
+import FormComponent from '../components/Form'
 import NoteModel from '../models/NoteModel'
 
-export class Home extends Component {
+export class Form extends Component {
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -43,10 +43,10 @@ export class Home extends Component {
     const { name, note } = this.props;
     return (
       <div>
-        <HomeComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} name={name} note={note} />
+        <FormComponent handleSubmit={this.handleSubmit} handleChange={this.handleChange} name={name} note={note} />
       </div>
     );
   }
 }
 
-export default Home
+export default Form
