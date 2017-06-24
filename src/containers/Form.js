@@ -10,7 +10,6 @@ export class Form extends Component {
       lng: 0,
       rating: 0,
     }
-    this.rating = 0
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.getLocation = this.getLocation.bind(this)
@@ -32,7 +31,7 @@ export class Form extends Component {
       e.target.note.value,
       this.state.lat,
       this.state.lng,
-      this.rating
+      this.state.rating
     )
     if (result) {
       alert('บันทึกข้อมูลเรียบร้อย')
