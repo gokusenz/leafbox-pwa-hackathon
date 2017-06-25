@@ -16,7 +16,7 @@ const ListItems = (props) => {
   }
   return (
     <ListItem threeLine>
-      <ListItemContent avatar={<img src={rating} style={{background: 'none'}} />} subtitle={item.detail}>{item.name}</ListItemContent>
+      <ListItemContent avatar={<img src={rating} style={{background: 'none'}} alt="rating" />} subtitle={item.detail}>{item.name}</ListItemContent>
     </ListItem>
   )
 }

@@ -1,14 +1,14 @@
 {
-  "version": "1.0.0",
-  "name": "LeafBox",
+  "version": "1.0.1",
+  "name": "Once bitten, Twice shy",
   "launch_path": "/index.html",
-  "description": "LeafBox",
+  "description": "Once bitten, Twice shy",
   "icons": {
     "128": "/images/icons/icon-128x128.png"
   },
   "developer": {
-    "name": "",
-    "url": ""
+    "name": "Once bitten, Twice shy",
+    "url": "https://leafbox-pwa-hackathon.firebaseapp.com"
   },
   "installs_allowed_from": [
     "*"
@@ -18,8 +18,8 @@
   },
   "locales": {
     "en": {
-      "name": "LeafBox",
-      "description": "LeafBox"
+      "name": "Once bitten, Twice shy",
+      "description": "Once bitten, Twice shy"
     }
   }
 }
