@@ -2,18 +2,22 @@ import React from 'react';
 import { Textfield, Card, CardTitle, CardText, CardActions, CardMenu, Button, IconButton } from 'react-mdl';
 import MapView from '../containers/Map'
 import ReactStars from 'react-stars'
+import cover from '../../public/images/cover.svg'
 
 const Form = ({ handleSubmit, handleChange, getLocation, ratingChanged, name, note, lat, lng, rating }) => (
-  <div style={{width: '90%', margin: 'auto'}}>
+  <div style={{width: '90%', margin: '150px auto 0 auto'}}>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <Card shadow={0} style={{width: '100%', margin: 'auto'}}>
-        <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Welcome to LeafBox</CardTitle>
+        <CardTitle style={{color: '#fff', height: '176px', background: 'url(' + cover + ') center / cover'}}></CardTitle>
         <CardText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque lacus eleifend lacinia...
         </CardText>
-        <CardActions border>
-            <Button colored>Get Started</Button>
-        </CardActions>
         <CardMenu style={{color: '#fff'}}>
             <IconButton name="share" />
         </CardMenu>
