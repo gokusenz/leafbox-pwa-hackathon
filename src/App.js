@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
 
-import About from './components/About';
+import List from './containers/List';
 import Form from './containers/Form';
 
 const RouteHideDrawer = ({ component: Component, ...rest }) => (
@@ -23,12 +23,12 @@ export default () => (
       <Drawer title="LeafBox">
         <Navigation>
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/add">Add</Link>
         </Navigation>
       </Drawer>
       <Content>
-        <RouteHideDrawer exact path="/" component={ Form } />
-        <RouteHideDrawer path="/about" component={ About } />
+        <RouteHideDrawer exact path="/" component={ List } />
+        <RouteHideDrawer path="/add" component={ Form } />
       </Content>
     </Layout>
   </Router>

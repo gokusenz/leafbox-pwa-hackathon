@@ -8,7 +8,7 @@ class NoteModel {
 
   saveData(name, detail, lat, lng, rating) {
     try {
-      const noteRef = this.db.ref(`note/${name}`)
+      const noteRef = this.db.ref(`note`)
       noteRef.push().set({
         name,
         detail,
@@ -24,8 +24,8 @@ class NoteModel {
     }
   }
 
-  getList(name) {
-    return this.db.ref(`note/${name}`).once('value')
+  getList() {
+    return this.db.ref(`note`).once('value')
   }
 
 }
