@@ -8,7 +8,7 @@ export class List extends Component {
     this.state = {
       noteList: [],
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
     this.noteModel = new NoteModel()
   }
 
@@ -31,15 +31,15 @@ export class List extends Component {
     })
   }
 
-  handleClick() {
-    console.log('click')
+  handleSearch(e) {
+    console.log(e.target.value)
   }
 
 
   render() {
     return (
       <div>
-        <ListComponent handleClick={this.handleClick} noteList={this.state.noteList} />
+        <ListComponent handleSearch={this.handleSearch} noteList={this.state.noteList} />
       </div>
     );
   }
