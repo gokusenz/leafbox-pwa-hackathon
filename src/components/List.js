@@ -1,10 +1,15 @@
 import React from 'react';
 import ListItemComponent from './ListItem'
-import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield, FABButton } from 'react-mdl';
+import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield, FABButton, Card, CardTitle, CardText, CardActions, Button } from 'react-mdl';
+import cover from '../../public/images/cover.svg'
 
 const NoteList = ({ handleSearch, noteList }) => (
   <div>
-    <div style={{ height: '300px' }}></div>
+    <div style={{ height: '600px' }}></div>
+    <Card shadow={0} style={{width: '90%', margin: 'auto'}}>
+        <CardTitle style={{color: '#fff', marginBottom: '-25px', minHeight: '280px', background: 'url(' + cover + ') center / cover'}}></CardTitle>
+    </Card>
+    <br />
     <div style={{width: '60%', minWidth: '200px', margin: '0 0 -10px 20px', padding: '0 20px', border: '0.5px solid', borderRadius: '5px'}}>
       <Textfield
         onChange={e => handleSearch(e)}
