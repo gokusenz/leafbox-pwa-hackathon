@@ -20,14 +20,14 @@ const RouteHideDrawer = ({ component: Component, ...rest }) => (
 export default () => (
   <Router>
     <Layout fixedHeader>
-      <Header title="Once bitten, Twice shy"/>
+      <Header title="Once bitten, Twice shy" style={{ height: '56px'}} />
       <Drawer title="Once bitten, Twice shy">
         <Navigation>
           <Link to="/">List</Link>
           <Link to="/add">Add</Link>
         </Navigation>
       </Drawer>
-      <Content style={{backgroundImage: 'url(' + bg + ')'}}>
+      <Content style={{backgroundImage: 'url(' + bg + ')', paddingTop: '200px'}}>
         <RouteHideDrawer exact path="/" component={ List } />
         <RouteHideDrawer path="/add" component={ Form } />
       </Content>
