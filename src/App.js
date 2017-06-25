@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
 
+import Home from './components/Home';
 import List from './containers/List';
 import Form from './containers/Form';
 import bg from '../public/images/background.png'
@@ -23,12 +24,13 @@ export default () => (
       <Header title="Once bitten, Twice shy" style={{ height: '56px'}} />
       <Drawer title="Once bitten, Twice shy">
         <Navigation>
-          <Link to="/">List</Link>
+          <Link to="/list">List</Link>
           <Link to="/add">Add</Link>
         </Navigation>
       </Drawer>
-      <Content style={{backgroundImage: 'url(' + bg + ')', paddingTop: '350px'}}>
-        <RouteHideDrawer exact path="/" component={ List } />
+      <Content style={{backgroundImage: 'url(' + bg + ')'}}>
+        <RouteHideDrawer exact path="/" component={ Home } />
+        <RouteHideDrawer path="/list" component={ List } />
         <RouteHideDrawer path="/add" component={ Form } />
       </Content>
     </Layout>

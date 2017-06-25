@@ -6,6 +6,7 @@ import cover from '../../public/images/cover.svg'
 
 const Form = ({ handleSubmit, handleChange, getLocation, ratingChanged, name, note, lat, lng, rating }) => (
   <div style={{width: '90%', margin: 'auto'}}>
+    <div style={{ height: '230px' }}></div>
     <Card shadow={0} style={{width: '100%', margin: 'auto'}}>
         <CardTitle style={{color: '#fff', marginBottom: '-25px', minHeight: '280px', background: 'url(' + cover + ') center / cover'}}></CardTitle>
         <CardText>

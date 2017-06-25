@@ -4,6 +4,7 @@ import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield, FABBu
 
 const NoteList = ({ handleSearch, noteList }) => (
   <div>
+    <div style={{ height: '300px' }}></div>
     <div style={{width: '60%', minWidth: '200px', margin: '0 0 -10px 20px', padding: '0 20px', border: '0.5px solid', borderRadius: '5px'}}>
       <Textfield
         onChange={e => handleSearch(e)}
