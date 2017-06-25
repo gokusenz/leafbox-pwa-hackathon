@@ -28,6 +28,13 @@ class NoteModel {
     return this.db.ref(`note`).once('value')
   }
 
+  getSearch(queryText) {
+    return this.db.ref(`note`).orderByChild('name')
+    .startAt(queryText)
+    .endAt(queryText+"\uf8ff")
+    .once("value")
+  }
+
 }
 
 export default NoteModel

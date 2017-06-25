@@ -31,10 +31,20 @@ export class List extends Component {
     })
   }
 
-  handleSearch(e) {
-    console.log(e.target.value)
+  handleSearch(e) { 
+    this.noteModel.getSearch(e.target.value)
+    .then(result => {
+      let noteList = result
+      const arr = []
+      const r = noteList.val()
+      for (const i in r) {
+        arr.push({ id: i, ...r[i] })
+      }
+      this.setState({
+        noteList: arr,
+      })
+    })
   }
-
 
   render() {
     return (
