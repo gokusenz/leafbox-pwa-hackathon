@@ -5,6 +5,7 @@ import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
 
 import List from './containers/List';
 import Form from './containers/Form';
+import bg from '../public/images/background.png'
 
 const RouteHideDrawer = ({ component: Component, ...rest }) => (
   <Route {...rest} render={() => {
@@ -22,11 +23,11 @@ export default () => (
       <Header title="LeafBox"/>
       <Drawer title="LeafBox">
         <Navigation>
-          <Link to="/">Home</Link>
+          <Link to="/">List</Link>
           <Link to="/add">Add</Link>
         </Navigation>
       </Drawer>
-      <Content>
+      <Content style={{backgroundImage: 'url(' + bg + ')'}}>
         <RouteHideDrawer exact path="/" component={ List } />
         <RouteHideDrawer path="/add" component={ Form } />
       </Content>
