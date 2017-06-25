@@ -24,8 +24,8 @@ export default () => (
       <Header title="Once bitten, Twice shy" style={{ height: '56px'}} />
       <Drawer title="Once bitten, Twice shy">
         <Navigation>
-          <Link to="/list">List</Link>
-          <Link to="/add">Add</Link>
+          <Link to="/list">ดูข้อมูลทั้งหมด</Link>
+          <Link to="/add">เพิ่มข้อมูล</Link>
         </Navigation>
       </Drawer>
       <Content style={{backgroundImage: 'url(' + bg + ')'}}>
