@@ -12,18 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'leafboxData-v1.4';
-var cacheName = 'leafboxData-v1-1.4';
+var dataCacheName = 'leafboxData-v1.5';
+var cacheName = 'leafboxData-v1-1.5';
 var filesToCache = [
   '/',
   '/index.html',
   '/public/index.html',
   '/styles/inline.css',
+  '/images/cover_add.jpg',
+  '/images/cover_list.jpg',
   '/images/background.png',
   '/images/cover.svg',
-  '/images/rating_bad',
-  '/images/rating_good',
-  '/images/rating_mid',
+  '/images/rating_bad.svg',
+  '/images/rating_good.svg',
+  '/images/rating_mid.svg',
+  '/images/**',
 ];
 
 self.addEventListener('install', function(e) {

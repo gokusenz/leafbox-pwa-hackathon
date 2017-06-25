@@ -6,12 +6,14 @@ import cover from '../../public/images/cover.svg'
 
 const Form = ({ handleSubmit, handleChange, getLocation, ratingChanged, name, note, lat, lng, rating }) => (
   <div style={{width: '90%', margin: 'auto'}}>
-    <div style={{ height: '230px' }}></div>
+    <div style={{ height: '250px' }}></div>
     <Card shadow={0} style={{width: '100%', margin: 'auto'}}>
         <CardTitle style={{color: '#fff', marginBottom: '-25px', minHeight: '280px', background: 'url(' + cover + ') center / cover'}}></CardTitle>
         <CardText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
+            คนเราเจ็บแล้วต้องจำ 
+            ดังนั้น เจ็บจากร้านไหนมา เจ็บจากเมนูไหนมา หรือ ต้องการเตือนความจำ 
+            ให้จดใส่ไว้ในนี้ซะ
+            เมื่อไหร่ ที่เข้าร้านอาหาร ให้เช็คในนี้ว่า เคยเจ็บจากที่นี่หรือยัง? เมนูไหนทำเจ็บ?
         </CardText>
         <CardMenu style={{color: '#fff'}}>
             <IconButton name="share" />
