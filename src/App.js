@@ -27,7 +27,7 @@ export default () => (
           <Link to="/add">Add</Link>
         </Navigation>
       </Drawer>
-      <Content style={{backgroundImage: 'url(' + bg + ')', paddingTop: '200px'}}>
+      <Content style={{backgroundImage: 'url(' + bg + ')', paddingTop: '350px'}}>
         <RouteHideDrawer exact path="/" component={ List } />
         <RouteHideDrawer path="/add" component={ Form } />
       </Content>
