@@ -9,6 +9,7 @@ export class List extends Component {
       noteList: [],
     }
     this.handleSearch = this.handleSearch.bind(this)
+    this.handleLocation = this.handleLocation.bind(this)
     this.noteModel = new NoteModel()
   }
 
@@ -46,10 +47,16 @@ export class List extends Component {
     })
   }
 
+  handleLocation(e) {
+    console.log('location')
+    e.preventDefault() 
+    this.getList()
+  }
+
   render() {
     return (
       <div>
-        <ListComponent handleSearch={this.handleSearch} noteList={this.state.noteList} />
+        <ListComponent handleSearch={this.handleSearch} handleLocation={this.handleLocation} noteList={this.state.noteList} />
       </div>
     );
   }

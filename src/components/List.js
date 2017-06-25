@@ -3,7 +3,7 @@ import ListItemComponent from './ListItem'
 import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield, FABButton, Card, CardTitle, CardText, CardActions, Button } from 'react-mdl';
 import cover from '../../public/images/cover.svg'
 
-const NoteList = ({ handleSearch, noteList }) => (
+const NoteList = ({ handleSearch, handleLocation, noteList }) => (
   <div>
     <div style={{ height: '600px' }}></div>
     <Card shadow={0} style={{width: '90%', margin: 'auto'}}>
@@ -21,7 +21,7 @@ const NoteList = ({ handleSearch, noteList }) => (
       />
     </div>
     <div style={{width: '17%', display: 'block', float: 'right', marginTop: '-55px'}}>
-      <FABButton mini ripple style={{ marginTop: '10px'}}>
+      <FABButton mini ripple style={{ marginTop: '10px'}} onClick={e => handleLocation(e)}>
           <Icon name="location_searching" />
       </FABButton>
     </div>
