@@ -1,10 +1,14 @@
 import React from 'react';
 import ListItemComponent from './ListItem'
-import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield } from 'react-mdl';
+import { List, ListItem, ListItemAction, ListItemContent, Icon, Textfield, FABButton } from 'react-mdl';
 
 const NoteList = ({ handleSearch, noteList }) => (
   <div>
-    <div style={{width: '80%', margin: '120px auto -10px auto', padding: '0 30px', border: '0.5px solid', borderRadius: '5px'}}>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div style={{width: '60%', margin: '120px 0 -10px 20px', padding: '0 20px', border: '0.5px solid', borderRadius: '5px'}}>
       <Textfield
         onChange={e => handleSearch(e)}
         name="search"
@@ -13,7 +17,12 @@ const NoteList = ({ handleSearch, noteList }) => (
         expandableIcon="search"
         style={{width: '100%'}}
       />
-    </div>  
+    </div>
+    <div style={{width: '17%', display: 'block', float: 'right', marginTop: '-55px'}}>
+      <FABButton mini ripple style={{ marginTop: '10px'}}>
+          <Icon name="location_searching" />
+      </FABButton>
+    </div>
     <List style={{width: '100%', margin: 'auto'}}>
       {
         noteList.map(doc => (

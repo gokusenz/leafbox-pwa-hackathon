@@ -9,7 +9,7 @@ class NoteModel {
   saveData(name, detail, lat, lng, rating) {
     try {
       const noteRef = this.db.ref(`note`)
-      noteRef.push().set({
+      noteRef.set({
         name,
         detail,
         lat,
