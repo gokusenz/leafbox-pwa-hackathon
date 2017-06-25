@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'leafboxData-v2';
-var cacheName = 'leafboxData-v2';
+var dataCacheName = 'leafboxData-v2-1';
+var cacheName = 'leafboxData-v2-1';
 var filesToCache = [
   '/',
   '/index.html',
