@@ -20,8 +20,8 @@ const RouteHideDrawer = ({ component: Component, ...rest }) => (
 export default () => (
   <Router>
     <Layout fixedHeader>
-      <Header title="LeafBox"/>
-      <Drawer title="LeafBox">
+      <Header title="Once bitten, Twice shy"/>
+      <Drawer title="Once bitten, Twice shy">
         <Navigation>
           <Link to="/">List</Link>
           <Link to="/add">Add</Link>

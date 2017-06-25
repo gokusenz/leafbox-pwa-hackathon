@@ -52,7 +52,7 @@ const Form = ({ handleSubmit, handleChange, getLocation, ratingChanged, name, no
       />
       <br />
       <br />
-      <Button raised accent ripple onClick={e => getLocation(e)}>Get Location</Button><Button raised colored style={{margin: '0 0 0 50px'}} type="submit">บันทึก</Button>
+      <Button raised accent ripple onClick={e => getLocation(e)}>Get Location</Button><Button raised colored style={{margin: '0 0 0 60px', width: '120px'}} type="submit">บันทึก</Button>
       <br />
       <br />
       <MapView lat={lat} lng={lng} />
